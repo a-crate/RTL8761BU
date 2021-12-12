@@ -1,6 +1,7 @@
+DESTDIR ?= /
 SRC_DIR	:= ./bluetooth_usb_driver
-MDL_DIR	:= /lib/modules/$(shell uname -r)
-DRV_DIR	:= $(MDL_DIR)/kernel/drivers/bluetooth
+MDL_DIR	:= $(DESTDIR)/lib/modules/$(shell uname -r)
+DRV_DIR	:= $(DESTDIR)/$(MDL_DIR)/kernel/drivers/bluetooth
 
 FIRMWARE_DIR := 8761BU
 ##########################################
